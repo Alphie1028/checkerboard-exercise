@@ -3,11 +3,10 @@ for(let i = 0; i < 81; i++){
         tile.style.minWidth = '11.1%';
         tile.style.paddingBottom = '11.1%';
         tile.style.float ='left';
-
-        if(i % 2 === 0){
-            tile.style.backgroundColor = 'black';
-        }else{
-            tile.style.backgroundColor = 'red';
-        }
+        tile.style.backgroundColor = '#' + randoColor();
         document.body.appendChild(tile); 
 }
+  function randoColor(){
+    let randomColor = Math.floor(Math.random()*16777215).toString(16);
+    return randomColor;
+  }
